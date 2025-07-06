@@ -25,11 +25,11 @@ public class RecursiveInsertionSort<T extends Comparable<T>> extends
 		if ((array.length > 0) && leftIndex != rightIndex) {
 			int i = leftIndex + 1;
 			T key = array[i];
-			int j = i - 1;
+			int j = leftIndex;
 			while (j >= 0 && array[j].compareTo(key)== 1) {
 				Util.swap(array, j, j + 1);
 				j--;
-			}
+			}  
 			sort(array, leftIndex + 1, rightIndex);
 		}		
 	}
